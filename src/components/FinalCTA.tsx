@@ -17,18 +17,19 @@ export default function FinalCTA() {
             Whether you&apos;re improving one room or upgrading multiple areas of your home, tell
             us what you have in mind.
           </p>
-
-          <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 hover:bg-blue-500 px-8 py-4 text-base font-semibold text-white shadow-[0_14px_36px_-10px_rgba(8,102,217,0.75)] transition-all hover:-translate-y-0.5"
-            >
-              Request a Free Estimate
-              <ArrowRight size={18} />
-            </a>
-            <CallSplitButton />
-          </div>
         </Reveal>
+
+        {/* No transform wrapper here: see note in Hero.tsx about iOS Safari blocking tel: taps mid-animation. */}
+        <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 hover:bg-blue-500 px-8 py-4 text-base font-semibold text-white shadow-[0_14px_36px_-10px_rgba(8,102,217,0.75)] transition-all hover:-translate-y-0.5"
+          >
+            Request a Free Estimate
+            <ArrowRight size={18} />
+          </a>
+          <CallSplitButton />
+        </div>
       </div>
     </section>
   );

@@ -27,3 +27,4 @@ dist-ssr
 .env*
 
 *.zip
+.claude/scheduled_tasks.lock

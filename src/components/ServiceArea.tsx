@@ -6,25 +6,28 @@ export default function ServiceArea() {
   return (
     <section id="service-area" className="bg-gray-50 py-24 sm:py-28">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-14 items-center">
-        <Reveal>
-          <span className="text-xs font-bold tracking-[0.2em] text-blue-600">SERVICE AREA</span>
-          <h2 className="mt-4 font-display font-bold text-navy-900 text-3xl sm:text-4xl lg:text-[2.6rem] text-balance">
-            Proudly Serving the Seattle Area
-          </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-lg">
-            Serving Seattle and surrounding communities throughout the Puget Sound region.
-          </p>
+        <div>
+          <Reveal>
+            <span className="text-xs font-bold tracking-[0.2em] text-blue-600">SERVICE AREA</span>
+            <h2 className="mt-4 font-display font-bold text-navy-900 text-3xl sm:text-4xl lg:text-[2.6rem] text-balance">
+              Proudly Serving the Seattle Area
+            </h2>
+            <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-lg">
+              Serving Seattle and surrounding communities throughout the Puget Sound region.
+            </p>
 
-          <div className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-white border border-gray-100 px-6 py-4 shadow-card">
-            <span className="flex items-center justify-center h-11 w-11 rounded-full bg-blue-50 text-blue-600">
-              <MapPin size={20} />
-            </span>
-            <div>
-              <p className="font-display font-bold text-navy-900 text-lg leading-none">Seattle, Washington</p>
-              <p className="mt-1 text-sm text-gray-500">Primary service region</p>
+            <div className="mt-8 inline-flex items-center gap-3 rounded-2xl bg-white border border-gray-100 px-6 py-4 shadow-card">
+              <span className="flex items-center justify-center h-11 w-11 rounded-full bg-blue-50 text-blue-600">
+                <MapPin size={20} />
+              </span>
+              <div>
+                <p className="font-display font-bold text-navy-900 text-lg leading-none">Seattle, Washington</p>
+                <p className="mt-1 text-sm text-gray-500">Primary service region</p>
+              </div>
             </div>
-          </div>
+          </Reveal>
 
+          {/* No transform wrapper here: see note in Hero.tsx about iOS Safari blocking tel: taps mid-animation. */}
           <p className="mt-8 text-base text-gray-500">
             Not sure if we service your area? Call us at{" "}
             {PHONE_NUMBERS.map((p, i) => (
@@ -38,7 +41,7 @@ export default function ServiceArea() {
             ))}
             .
           </p>
-        </Reveal>
+        </div>
 
         <Reveal delay={100}>
           <div className="relative aspect-[4/3] rounded-[1.75rem] bg-navy-900 overflow-hidden shadow-elevated">

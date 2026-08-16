@@ -26,26 +26,29 @@ export default function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={100} className="order-1 lg:order-2">
-          <span className="text-xs font-bold tracking-[0.2em] text-blue-600">MEET YOUR CONTRACTOR</span>
-          <h2 className="mt-4 font-display font-bold text-navy-900 text-3xl sm:text-4xl lg:text-[2.6rem] text-balance">
-            {BUSINESS.contractor}
-          </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-xl">
-            GSN Construction LLC is led by Gilberto da Silva Neto, providing homeowners
-            throughout the Seattle area with a direct and straightforward approach to
-            construction and home improvement projects.
-          </p>
-          <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-xl">
-            Gilberto works directly with clients to understand their needs and find the right
-            solution for each project, from a single room refresh to multiple improvements
-            around the home.
-          </p>
+        <div className="order-1 lg:order-2">
+          <Reveal delay={100}>
+            <span className="text-xs font-bold tracking-[0.2em] text-blue-600">MEET YOUR CONTRACTOR</span>
+            <h2 className="mt-4 font-display font-bold text-navy-900 text-3xl sm:text-4xl lg:text-[2.6rem] text-balance">
+              {BUSINESS.contractor}
+            </h2>
+            <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-xl">
+              GSN Construction LLC is led by Gilberto da Silva Neto, providing homeowners
+              throughout the Seattle area with a direct and straightforward approach to
+              construction and home improvement projects.
+            </p>
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-xl">
+              Gilberto works directly with clients to understand their needs and find the right
+              solution for each project, from a single room refresh to multiple improvements
+              around the home.
+            </p>
+          </Reveal>
 
+          {/* No transform wrapper here: see note in Hero.tsx about iOS Safari blocking tel: taps mid-animation. */}
           <div className="mt-9">
             <CallSplitButton variant="solid" prefix="Talk to Gilberto" className="hover:-translate-y-0.5" />
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -16,18 +16,19 @@ export default function MidCTA() {
           <p className="mt-4 text-lg text-white/75 max-w-xl mx-auto">
             Tell us what you need and get started with a free estimate.
           </p>
-
-          <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white hover:bg-blue-50 px-7 py-4 text-base font-semibold text-navy-900 shadow-elevated transition-all hover:-translate-y-0.5"
-            >
-              Get My Free Estimate
-              <ArrowRight size={18} />
-            </a>
-            <CallSplitButton />
-          </div>
         </Reveal>
+
+        {/* No transform wrapper here: see note in Hero.tsx about iOS Safari blocking tel: taps mid-animation. */}
+        <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white hover:bg-blue-50 px-7 py-4 text-base font-semibold text-navy-900 shadow-elevated transition-all hover:-translate-y-0.5"
+          >
+            Get My Free Estimate
+            <ArrowRight size={18} />
+          </a>
+          <CallSplitButton />
+        </div>
       </div>
     </section>
   );
