@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gsnconstructionllc.com/sitemap.xml
+Sitemap: https://gsnconstructionllc.com/sitemap.xml

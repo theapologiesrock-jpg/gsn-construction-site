@@ -57,12 +57,16 @@ export default function BeforeAfterSlider({
       <img
         src={afterSrc}
         alt={`${alt} — completed`}
+        width={1200}
+        height={1600}
         className="absolute inset-0 h-full w-full object-cover"
         draggable={false}
       />
       <img
         src={beforeSrc}
         alt={`${alt} — in progress`}
+        width={1200}
+        height={1600}
         className="absolute inset-0 h-full w-full object-cover"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         draggable={false}
